@@ -1,4 +1,4 @@
 node_modules
-config.js
+src/shared/config.js
 lib
 .env
