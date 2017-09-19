@@ -1,4 +1,8 @@
-const webpack = require('webpack') // webpack itself
+import webpack from 'webpack'
+
+import { WDS_PORT } from './src/server/config.js'
+import { isProd } from './src/server/util'
+
 const path = require('path') // nodejs dependency when dealing with paths
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin') // require webpack plugin
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin') // require webpack plugin
@@ -8,7 +12,8 @@ let config = { // config object
   entry: './src/index.js', // entry file
   output: { // output
     path: path.resolve(__dirname, 'public'), // ouput path
-    filename: 'output.js' // output filename
+    filename: 'output.js', // output filename
+    publicPath: isProd ? '/static/' : `http://localhost:${WDS_PORT}/public/`,
   },
   resolve: { // These options change how modules are resolved
     extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.jpeg', '.jpg', '.gif', '.png'], // Automatically resolve certain extensions
