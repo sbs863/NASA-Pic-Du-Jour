@@ -5,11 +5,11 @@ const renderApp = () =>
   `<!doctype html>
 <html>
   <head>
-    <title>${title}</title>
+    <title>Nasa Pic Du Jour</title>
     <link rel="stylesheet" href="${STATIC_PATH}/css/style.css">
   </head>
   <body>
-    <h1>${title}</h1>
+    <h1>Nasa Pic Du Jour</h1>
   </body>
 </html>
 `
