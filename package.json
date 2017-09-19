@@ -1,9 +1,5 @@
 {
   "name": "nasa-react-redux",
-  "engines": {
-    "node": "7.x",
-    "yarn": "0.20.3"
-  },
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
