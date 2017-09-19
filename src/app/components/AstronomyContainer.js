@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AstronomyCard from './AstronomyCard'
 import axios from 'axios'
-import { NASA_CREDS } from '../../../config'
+import { NASA_CREDS } from '../../../api'
 
 class AstronomyContainer extends Component {
 

@@ -1,8 +1,8 @@
-const webpack = require('webpack'); // webpack itself
-const path = require('path'); // nodejs dependency when dealing with paths
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin'); // require webpack plugin
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin'); // require webpack plugin
-const OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin'); // require webpack plugin
+const webpack = require('webpack') // webpack itself
+const path = require('path') // nodejs dependency when dealing with paths
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin') // require webpack plugin
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin') // require webpack plugin
+const OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin') // require webpack plugin
 
 let config = { // config object
   entry: './src/index.js', // entry file
@@ -74,11 +74,11 @@ let config = { // config object
   devtool: 'eval-source-map', // enable devtool for better debugging experience
 }
 
-module.exports = config;
+module.exports = config
 
 if (process.env.NODE_ENV === 'production') { // if we're in production mode, here's what happens next
   module.exports.plugins.push(
     new webpack.optimize.UglifyJsPlugin(), // call the uglify plugin
     new OptimizeCSSAssets() // call the css optimizer (minfication)
-  );
+  )
 }
